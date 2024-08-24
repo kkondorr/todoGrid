@@ -93,16 +93,17 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Todo List</h1>
+      <h1>My Todo List</h1>
 
       <div className="input-area">
         <input 
           type="text" 
-          placeholder="Title" 
+          placeholder="Task" 
           value={newTodoTitle} 
           onChange={(e) => setNewTodoTitle
 (e.target.value)} 
         />
+        <br></br>
         <textarea 
           placeholder="Description" 
           value={newTodoDescription} 
@@ -114,8 +115,8 @@ function App() {
       <div className="todo-grid"> 
         {todos.map(todo => (
           <div key={todo.id} className="todo-item">
-            <h3>{todo.title}</h3>
-            <p style={{ textDecoration: completedTasks.includes(todo.id) ? 'line-through' : 'none' }}>{todo.description}</p>
+            <h3 style={{ textDecoration: completedTasks.includes(todo.id) ? 'line-through green 4px' : 'none' }}>{todo.title}</h3>
+            <p style={{ textDecoration: completedTasks.includes(todo.id) ? 'line-through red 3px' : 'none' }}>{todo.description}</p>
             <button onClick={() => handleEditTodo(todo.id)}>Edit</button>
             <button onClick={() => handleDoneTodo(todo.id)}>Done</button>
             <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
