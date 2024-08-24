@@ -1,0 +1,55 @@
+/* App.css */
+
+body {
+  margin: 0; 
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  min-height: 100vh;
+  padding: 20px; 
+  margin: 0 auto; /* Center horizontally with equal margins */
+  max-width: 800px; /* Optional: Set a maximum width for large screens */
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Add any other styling for the input area */
+}
+
+.todo-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(250px, 1fr)); /* Start with 1 column */
+  grid-gap: 1rem; 
+}
+
+/* Media query for larger screens - 2 columns */
+@media (min-width: 500px) { 
+  .todo-grid {
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+  }
+}
+
+/* Media query for even larger screens - 3 columns */
+@media (min-width: 768px) {
+  .todo-grid {
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+  }
+}
+
+/* Media query for the largest screens - 4 columns */
+@media (min-width: 1024px) { 
+  .todo-grid {
+    grid-template-columns: repeat(4, minmax(300px, 1fr)); 
+  }
+}
+
+.todo-item {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
+}
