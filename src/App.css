@@ -75,3 +75,21 @@ input[type=text] {
   padding: 1rem;
   border-radius: 10px;
 }
+
+#addCardButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #85c1e9;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#addCardButton:hover {
+  background-color: #2471a3; /* Darker blue on hover */
+}
+
